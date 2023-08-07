@@ -5,7 +5,9 @@ import EngagementMessagesOverTime from "./components/EngagementMessagesOverTime"
 function App() {
   return (
     <div className="App">
-      <EngagementMessagesOverTime />
+      <div className="ChartContainer">
+        <EngagementMessagesOverTime />
+      </div>
     </div>
   );
 }

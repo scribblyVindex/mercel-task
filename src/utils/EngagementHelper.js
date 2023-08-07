@@ -1,4 +1,39 @@
+const monthNames = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
 const chartOptions = {
+  tooltip: {
+    formatter: function () {
+      let date = new Date(this.x);
+      let messages = this.y;
+      let tooltipString = `${
+        this.series.name
+      } <br/> ${messages} messages on ${date.getDate()} ${
+        monthNames[date.getMonth()]
+      }`;
+      return tooltipString;
+    },
+    valueSuffix: "jj/km²",
+    backgroundColor: "black",
+    borderColor: "cyan",
+    borderWidth: 1,
+    color: "white",
+    style: {
+      color: "white",
+    },
+  },
   chart: {
     backgroundColor: "#22222c",
     type: "spline",
@@ -8,6 +43,9 @@ const chartOptions = {
     series: {
       connectNulls: true,
       color: "cyan",
+      marker: {
+        enabled: false,
+      },
     },
   },
 
@@ -46,6 +84,7 @@ const chartOptions = {
   },
   series: [],
   legend: {
+    backgroundColor: "black",
     itemStyle: {
       color: "grey",
     },

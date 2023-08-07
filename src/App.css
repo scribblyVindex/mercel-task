@@ -2,6 +2,13 @@
   text-align: center;
   background-color: #22222c;
   height: 100vh;
+  display: grid;
+  grid-template-rows: 25vh 25vh 25vh 25vh;
+}
+
+.ChartContainer {
+  grid-row-start: 2;
+  grid-row-end: 4;
 }
 
 .App-logo {
