@@ -71,13 +71,16 @@ const chartOptions = {
     },
   },
   yAxis: {
+    ceiling: 6,
+    rangeSelector: {
+      selected: 1,
+    },
     labels: {
       style: {
         color: "grey",
       },
     },
     gridLineWidth: 0,
-
     title: {
       text: "",
     },
