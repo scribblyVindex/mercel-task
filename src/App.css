@@ -1,10 +1,7 @@
 .App {
   text-align: center;
   background-color: #22222c;
-  min-height: 100vh;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
+  height: 100vh;
 }
 
 .App-logo {
